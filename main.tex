@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[
+backend=biber,
+citestyle=numeric
+]{biblatex}
+\addbibresource{references.bib}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+\title{UFO Exam Part 4}
+\author{Emil Valbak Hermansen}
+\date{1st of January 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+The following document will cover two recommendations to the article Choosing between Containerization or Virtualization\cite{contain_vs_virtual}. Following recommendations are considerations regarding security and a look at performance.
+\pagebreak
+
+\section{Recommendations}
+\subsection{Regarding security}
+Overall a nice quick overview of the main differences between virtualization and containerization. A thing that stood out when reading the article was what seems like a contradicting statement regarding security. In section two, \emph{Containerization in contrast to Virtualization}, it is stated that Virtualizations provides full isolation and therefore increased security. However, in section three, \emph{Containerization pro’s and con’s}, one of the points in the paragraph regarding cons of using Virtualization was that you would have decreased security. 
+
+SearchCloudSecurity has written an article regarding the security considerations between containers and virtual machines.\cite{security_differences} In the section, \emph{OS virtualization security}, the writer makes arguments to how security on a virtualization level has both pros and cons. This supports both of the statements that initially seems contradicting. 
+
+I think it the article could be improved by making a segment regarding security to further elaborate on what seemed to be contradicting statements, or alternatively clarify it in the cons section with a sentence or two.  In itself and if managed correctly, virtualization is more secure. However, due to management issues, you can make mistakes. It could be as short as ``In a setup where you have multiple Virtual Machines, managing those could become an issue. Due to the management issues you might miss a dependency vulnerability and suddenly virtualization becomes less secure.''
+
+\subsection{Regarding performance}
+Depending on the readers use case, performance could also be a deciding factor. So another addition to the article could be a segment regarding performance.  The writers of the article might have thought it is trivial knowledge that VMs are by design slower due to the overhead by having an OS running per application, but it might still be unclear to the writer. 
+
+I would recommend adding a section regarding performance, referencing to the findings in \emph{A Comparative Study of Containers and VirtualMachines in Big Data Environment}, which supports the idea that containers are faster than virtual machines in running applications and boot up times.\cite{benchmarks} This would provide insight regarding performance into which choice to go with.
+
+\printbibliography
+\end{document}
